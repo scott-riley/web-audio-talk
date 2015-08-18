@@ -1,8 +1,84 @@
 <html>
 	<head>
-		<script src="assets/js/direct-monitor.js"></script>
+		<style>
+			body {
+				margin: 0;
+			}
+			.wrapper {
+				position: absolute;
+				width: 100%;
+				top: 0;
+				bottom: 0;
+				left: 0;
+				right: 0;
+			}
+			.shooting-star {
+				position: absolute;
+				z-index: 99;
+				height: 6px;
+				width: 6px;
+				background: white;
+				top: 40px;
+				right: -80px;
+				border-radius: 999em;
+				animation: ellipse .5s linear forwards;
+				box-shadow: 0 0 4px rgba(255,255,255,.4);
+			}
+			.comet {
+				position: absolute;
+				z-index: 99;
+				height: 24px;
+				width: 24px;
+				background: linear-gradient(135deg, #916478 0%,#434655 100%);
+				top: 40px;
+				right: -80px;
+				border-radius: 999em;
+				animation: ellipse 1s linear forwards;
+				box-shadow: 0 0 4px rgba(255,255,255,.4);
+			}
+			.planet {
+				position: absolute;
+				z-index: 99;
+				height: 36px;
+				width: 36px;
+				background: linear-gradient(135deg, rgb(27,96,137) 0%, rgb(46,152,154) 100%);
+				top: 40px;
+				right: -80px;
+				border-radius: 999em;
+				animation: ellipse 2s linear forwards;
+				box-shadow: 0 0 4px rgba(255,255,255,.4);
+			}
+			.t1 {
+				top: 80px;
+			}
+			.t2 {
+				top: 120px;
+			}
+			.t3 {
+				top: 150px;
+			}
+			.t4 {
+				top: 175px;
+			}
+			#c {
+				z-index: 1;
+			}
+			@keyframes ellipse {
+			  from {
+			    transform: translateX(0);
+			  }
+			  to {
+			    transform: translateX(-3000px);
+			  }
+			}
+		</style>
 	<head>
 	<body>
-		<h1>Some fuckin audio shit m8</h1>
+		<main class="wrapper">
+			<canvas id="c"></canvas>
+		</main>
+
+		<!-- <audio src="assets/audio/ambience.mp3" autoplay></audio> -->
+		<script src="assets/js/direct-monitor.js"></script>
 	</body>
 </html>
