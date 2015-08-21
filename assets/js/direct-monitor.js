@@ -34,7 +34,7 @@ function toggleFullScreen() {
   }
   setTimeout (function(){
     drawBackground();
-  }, 300)
+  }, 1000)
 }
 
 var buffers = [];
